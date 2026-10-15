@@ -11,10 +11,6 @@ import java.sql.SQLException;
                          DatabaseConnection.getConnection()) {
 
                 System.out.println("MySQL connection successful!");
-                System.out.println(
-                        "Database: "
-                                + connection.getCatalog()
-                );
 
             } catch (SQLException e) {
                 System.out.println(
