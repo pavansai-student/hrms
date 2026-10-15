@@ -34,18 +34,11 @@ public class OrganizationDashboard {
                     employeeService.showMenu(scanner, session);
                     break;
 
-//                case "2":
-//                    System.out.println(
-//                            "Attendance management will be implemented next.");
-//                    break;
+
                 case "2":
                     attendanceService.showMenu(scanner, session);
                     break;
 
-//                case "3":
-//                    System.out.println(
-//                            "Salary management will be implemented next.");
-//                    break;
                 case "3":
                     salaryService.showMenu(scanner, session);
                     break;
@@ -56,8 +49,7 @@ public class OrganizationDashboard {
 
                 case "5":
                     loggedIn = false;
-                    System.out.println(
-                            "Logged out successfully.");
+                    System.out.println("Logged out successfully.");
                     break;
 
                 default:
