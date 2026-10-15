@@ -27,10 +27,8 @@ public class LoginDAO {
                   AND o.status = 'ACTIVE'
                 """;
 
-        try (Connection connection =
-                     DatabaseConnection.getConnection();
-             PreparedStatement ps =
-                     connection.prepareStatement(sql)) {
+        try (Connection connection =DatabaseConnection.getConnection();
+             PreparedStatement ps = connection.prepareStatement(sql)) {
 
             ps.setString(1, email);
             ps.setString(2, password);
