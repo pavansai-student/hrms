@@ -1,14 +1,21 @@
 package com.hrms.ui;
-
+import com.hrms.service.NoticeService;
+import com.hrms.service.SalaryService;
 import com.hrms.service.EmployeeService;
 import com.hrms.dao.LoginDAO.OrganizationSession;
-
+import com.hrms.service.AttendanceService;
 import java.util.Scanner;
 
 public class OrganizationDashboard {
 
     private final EmployeeService employeeService =
             new EmployeeService();
+    private final AttendanceService attendanceService =
+            new AttendanceService();
+    private final SalaryService salaryService =
+            new SalaryService();
+    private final NoticeService noticeService =
+            new NoticeService();
 
     public void show(
             Scanner scanner,
@@ -36,20 +43,24 @@ public class OrganizationDashboard {
                     employeeService.showMenu(scanner, session);
                     break;
 
+//                case "2":
+//                    System.out.println(
+//                            "Attendance management will be implemented next.");
+//                    break;
                 case "2":
-                    System.out.println(
-                            "Attendance management will be implemented next.");
+                    attendanceService.showMenu(scanner, session);
                     break;
 
+//                case "3":
+//                    System.out.println(
+//                            "Salary management will be implemented next.");
+//                    break;
                 case "3":
-                    System.out.println(
-                            "Salary management will be implemented next.");
+                    salaryService.showMenu(scanner, session);
                     break;
 
                 case "4":
-                    System.out.println(
-                            "Notice / holiday management will be "
-                                    + "implemented next.");
+                    noticeService.showMenu(scanner, session);
                     break;
 
                 case "5":
