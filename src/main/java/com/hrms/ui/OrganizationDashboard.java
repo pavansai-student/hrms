@@ -8,26 +8,17 @@ import java.util.Scanner;
 
 public class OrganizationDashboard {
 
-    private final EmployeeService employeeService =
-            new EmployeeService();
-    private final AttendanceService attendanceService =
-            new AttendanceService();
-    private final SalaryService salaryService =
-            new SalaryService();
-    private final NoticeService noticeService =
-            new NoticeService();
+    private final EmployeeService employeeService =new EmployeeService();
+    private final AttendanceService attendanceService =new AttendanceService();
+    private final SalaryService salaryService =new SalaryService();
+    private final NoticeService noticeService = new NoticeService();
 
-    public void show(
-            Scanner scanner,
-            OrganizationSession session) {
+    public void show( Scanner scanner, OrganizationSession session) {
 
         boolean loggedIn = true;
 
         while (loggedIn) {
-            System.out.println(
-                    "\n===== WELCOME TO "
-                            + session.getOrganizationName().toUpperCase()
-                            + " =====");
+            System.out.println( "\n===== WELCOME TO " + session.getOrganizationName().toUpperCase() + " =====");
 
             System.out.println("1. Employee Management");
             System.out.println("2. Attendance Management");
@@ -36,7 +27,7 @@ public class OrganizationDashboard {
             System.out.println("5. Logout");
             System.out.print("Enter your choice: ");
 
-            String choice = scanner.nextLine().trim();
+            String choice = scanner.nextLine();
 
             switch (choice) {
                 case "1":
